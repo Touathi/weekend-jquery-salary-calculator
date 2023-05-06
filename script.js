@@ -31,12 +31,15 @@ $('#eeBody').append(`
             ${lastNameInput}
         </td>
         <td>
-            ${}
+            ${eEIdInput}
         </td>
-
-
-
-
+        <td>
+            ${titleInput}
+        </td>
+        <td>
+            ${anuSalInput}
+        </td>
+        
     </tr>
 `)
 
