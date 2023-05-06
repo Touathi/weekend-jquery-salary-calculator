@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+}
+
+table, th, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 50px;
+    padding: 10px;
+    
+}
+
+footer {
+    text-align: right;
+}
+
+#salCal {
+    text-align: center;
+    background-color: gray;
+    margin: 0px;
+}

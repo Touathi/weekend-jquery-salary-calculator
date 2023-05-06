@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="salCal">Salary Calculator</h2>
+   
+    <h1>Add Employee</h1>
+
+    <form>
+
+        <input 
+            type="text"
+            placeholder="First Name"
+            id="firstNInput"
+        >
+
+        <input 
+            type="text"
+            placeholder="Last Name" 
+            id="lastNInput"
+        >
+
+        <input 
+            type="text"
+            placeholder="ID"
+            id="eeIDInput"
+        >
+
+        <input 
+            type="text"
+            placeholder="Title" 
+            id="titleInput"
+        >
+        
+        <input 
+            type="text"
+            placeholder="Annual Salary" 
+            id="annualSalInput"
+        >
+
+        <button id="submitBtn">Submit</button>
+    </form>
+
+    <h1 id="Ee">Employees</h1>
+
+    <table>
+      <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+        
+      </thead>
+
+        <tbody id="eeBody">
+            <tr>
+                <td>Jen</td> <td>Barber</td> <td>4521</td> <td>Team Lead</td> <td>$80,000</td> <td><button>Delete</button></td>
+            </tr>
+            
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <Footer>Monthly Total:</>
+</body>
+</html>
