@@ -39,8 +39,17 @@ $('#eeBody').append(`
         <td>
             ${anuSalInput}
         </td>
-        
+        <td>
+            <button class = 'delete-Btn'>❌</button>
+        </td>
     </tr>
 `)
 
+
+    // Emptying input values when click submit
+    $('#firstNInput').val('');
+    $('#lastNInput').val('');
+    $('#eeIDInput').val('');
+    $('#titleInput').val('');
+    $('#annualSalInput').val('');
 }
