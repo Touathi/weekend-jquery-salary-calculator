@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+   
     <h1 id="salCal">Salary Calculator</h2>
    
     <h1>Add Employee</h1>
@@ -30,7 +31,7 @@
 
         <input 
             type="text"
-            placeholder="ID"
+            placeholder="ID Number"
             id="eeIDInput"
         >
 
@@ -42,37 +43,41 @@
         
         <input 
             type="text"
+            
             placeholder="Annual Salary" 
             id="annualSalInput"
         >
-
-        <button id="submitBtn">Submit</button>
+        
     </form>
+
+         <button id="submitBtn">Submit</button>
 
     <h1 id="Ee">Employees</h1>
 
     <table>
       <thead>
-        <tr>
+        <tr id="topRow">
             <th>First Name</th>
             <th>Last Name</th>
-            <th>ID</th>
+            <th>ID Number</th>
             <th>Title</th>
             <th>Annual Salary</th>
+            <th></th>
         
-      </thead>
+         </thead>
 
-        <tbody id="eeBody">
-            <tr>
-                <td>Jen</td> <td>Barber</td> <td>4521</td> <td>Team Lead</td> <td>$80,000</td> <td><button>Delete</button></td>
-            </tr>
+         <tbody id="eeBody">
+            <!-- APPEND VALUES HERE IN TABLE -->
             
-            <tr>
-
+         </tbody>
+            <!-- Created an Empty row for the table -->
+         <tbody>
+            <tr id="botRow">
             </tr>
-        </tbody>
-    </table>
+         </tbody>
+        </table>
 
-    <Footer>Monthly Total:</>
+        <h3 id="goRed">Total Monthly: <span id="monthlyTotal"></span></h3>
+
 </body>
 </html>

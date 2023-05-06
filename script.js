@@ -1,18 +1,26 @@
 $(document).ready(onReady);
 
-console.log('YAYY Its loaded');
+
+let monthTotal;
+
 
 function onReady() {
-        console.log('Ready to run');
+        console.log('Ready to run!!');
 
 
     $('#submitBtn').on('click', handleSubmit)
+    $('#eeBody').on('click', '#deleteBtn', handleDelete)
 
-}
+
+    
 
 
+
+// The submit button //
 function handleSubmit() {
     
+
+    // Getting the values of the inputs //
     let firstNameInput = $('#firstNInput').val();
     let lastNameInput = $('#lastNInput').val();
     let eEIdInput = $('#eeIDInput').val();
@@ -21,10 +29,11 @@ function handleSubmit() {
 
 event.preventDefault();
 
+// appending the input values and delete Btn into the table //
 $('#eeBody').append(`
 
     <tr>
-        <td>
+        <td> 
             ${firstNameInput}
         </td>
         <td>
@@ -40,10 +49,18 @@ $('#eeBody').append(`
             ${anuSalInput}
         </td>
         <td>
-            <button class = 'delete-Btn'>❌</button>
+            <button id ='deleteBtn'>Delete</button>
         </td>
     </tr>
 `)
+
+
+    // Append the annual salary value into monthly total
+    monthTotal = anuSalInput
+    $('#monthlyTotal').text(monthTotal)
+
+    // Add new appened Annual Sal value to Current monthly Total
+   
 
 
     // Emptying input values when click submit
@@ -53,3 +70,17 @@ $('#eeBody').append(`
     $('#titleInput').val('');
     $('#annualSalInput').val('');
 }
+
+// The ❌/Delete button //
+function handleDelete() {
+    $(this).parent().parent().remove();
+}
+    
+    // TRIED If Statement, Change background color to red if 
+    // monthTotal > 20000
+    if (monthTotal > 20000) {
+        return $('#goRed').addclass("monthChangeColor");
+    }
+}
+
+console.log('YAYY Its loaded!!');
