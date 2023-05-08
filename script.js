@@ -38,7 +38,7 @@ let monthTotal = 0
         // I understands that this seperate every 3 numbers and adds a "," in between it 
         // but dont understand all the /(?=(?:\d{3})+$)/ stuff.
         // what does all the / and ? \ means?
-        // let commaInAnuSalNumbers = anuSalInput.split(/(?=(?:\d{3})+$)/).join(",")
+        let commaInAnuSalNum = anuSalInput.split(/(?=(?:\d{3})+$)/).join(",")
         
 
 
@@ -62,7 +62,7 @@ $('#eeBody').append(`
             ${titleInput}
         </td>
         <td>
-            $ ${anuSalInput}
+            $ ${commaInAnuSalNum}
         </td>
         <td>
             <button id ='deleteBtn'>Delete</button>
