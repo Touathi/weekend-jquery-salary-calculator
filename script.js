@@ -15,9 +15,9 @@ function onReady() {
 
     // Round to nearest 2 decimals
    
-let monthTotal = 0
- let formattedMonthTotal = Math.round( monthTotal * 100) / 100
-// The submit button //
+    let monthTotal = 0
+    let formattedMonthTotal = Math.round( monthTotal * 100) / 100
+    // The submit button //
     function handleSubmit() {
     
 
@@ -39,6 +39,7 @@ let monthTotal = 0
         // but dont understand all the /(?=(?:\d{3})+$)/ stuff.
         // what does all the / and ? \ means?
         let commaInAnuSalNum = anuSalInput.split(/(?=(?:\d{3})+$)/).join(",")
+        // This worked
         
 
 
@@ -79,23 +80,34 @@ $('#eeBody').append(`
    formattedMonthTotal += anuSal
     // Change the Total Month everytime a new values is added
     // $('#monthlyTotal').text(monthTotal) 
-    $('#monthlyTotal').text(formattedMonthTotal) 
+    $('#monthlyTotal').text(formattedMonthTotal) //-------------------------
 
-   
+    // Tired to have "," after every 3 numbers in total monthly.
+
+    // $('#monthlyTotal').text(formattedMonthTotal.split(/(?=(?:\d{3})+$)/).join(",")) 
+
+    // Did not work, TypeError: said it was not a function.
+
+    // Tried created a variable for it
+    // let commainMonTol = formattedMonthTotal.split(/(?=(?:\d{3})+$)/).join(",")
+    // $('#monthlyTotal').text(commainMonTol) 
+    // DID NOT WORK
+
+    // Tried using a function for it
+        // function commainMonTol() {
+        //     formattedMonthTotal.split(/(?=(?:\d{3})+$)/).join(",")
+        // } // TEST-----------------------------------
+        // $('#monthlyTotal').text(commainMonTol) 
+        // // DID NOT WORK --------------------
 
 
-
-
-
+    
     // Add new appened Annual Sal value to Current monthly Total
     //  $('#monthlyTotal').append(monthTotal);
     // DO NOT NEED TO APPEND .TEXT IS ALREADY CHANGING IT THE TEXT
     
     
-
-    
    
-
 
     // Emptying input values when click submit
     $('#firstNInput').val('');
